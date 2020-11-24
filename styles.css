@@ -9,7 +9,7 @@ body{
 }
 
 body a{
-  text-decoration: none;
+  text-decoration: none !important;
   color: #ffffff;
 }
 
@@ -18,6 +18,7 @@ del{
 }
 
 .main-container{
+  margin-top: 20px;
   padding: 0 10% 0 10%;
 }
 
@@ -29,14 +30,31 @@ del{
   transition: background-color 0.2s;
 }
 
+.btn-contact{
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: #009ddc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 5px 5px #1111112c;
+}
+
 .contact{
+  display: none;
+  z-index: 10;
+  color: #ffffff;
   position: fixed;
   bottom: 0;
   right: 0;
   text-align: center;
   padding: 5px;
-  width: 15vw;
-  background-color: #00B1F5;
+  width: 350px;
+  background-color: #00b0f5e7;
   border-radius: 5px 0 0 0;
   transition: background-color 0.2s;
 }
@@ -51,6 +69,7 @@ del{
   box-shadow: 0 5px 5px #1111112c;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
+  background-color: #ffffff !important;
 }
 
 #cabecalho .header-item{
@@ -99,12 +118,11 @@ del{
 }
 
 #menu-bar{
-  display: none;
-  font-size: 25px;
+  border: none;
 }
 
 #menu-bar i{
-  cursor: pointer;
+  transition: color 0.5s;
 }
 
 #menu-bar i:hover{
@@ -113,18 +131,19 @@ del{
 
 /* Produto em Destaque */
 #featured-product{
+  margin-top: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-height: 65vh;
+  /* max-height: 50vh; */
 }
 
-#feat-product-img{
+.feat-product-img{
   width: 100%;
   overflow: hidden;
 }
 
-#feat-product-img img{
+.feat-product-img img{
   width: 100%;
 }
 
@@ -137,6 +156,7 @@ del{
 }
 
 #feat-product-info{
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -176,7 +196,7 @@ del{
   align-items: center;
 }
 
-.section-tittle h2{
+.section-tittle h3{
   min-width: 300px;
 }
 
@@ -227,13 +247,13 @@ del{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   border: 1px solid #c7c7c7;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 40px;
   box-shadow: 0 2px 4px #a7a7a7;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .more-info-btn{
@@ -286,8 +306,8 @@ del{
   align-self: center;
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 45%);
-  column-gap: 10%;
+  grid-template-columns: repeat(2, 50%);
+  column-gap: 10px;
   width: 100%;
 }
 
@@ -358,30 +378,6 @@ footer{
 @media (max-width: 992px){
   .section-items{
     grid-template-columns: repeat(2, 50%);
-  }
-
-  #cabecalho #logo{
-    justify-content: left;
-  }
-  
-  #menu-bar{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  #cabecalho #options{
-    display: none;
-  }
-
-  #cabecalho{
-    grid-template-columns: repeat(2, 50%);
-    padding: 10px 10% 10px 10%;
-  }
-
-  #cabecalho #search{
-    display: none;
   }
 
   .product-details{

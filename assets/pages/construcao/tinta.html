@@ -7,26 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ItaCerâmica - Tinta Acrílica</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>ItaCerâmica - Home</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <script src="../../../javascript/jquery-1.3.2.min.js"></script>
+  <script src="../../../javascript/app.js"></script>
 </head>
 <body>
-  <header id="cabecalho">
-    <a id="logo" href="../../../index.html" class="header-item">
+  <nav id="cabecalho" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../../../index.html">
       <img src="../../img/logo.png" alt="ItaCeramica" width="230px">
     </a>
-    <div id="search" class="header-item">
-      <input type="text" name="search" id="search-input" placeholder="Pesquisar">
-      <button id="search-btn"><i class="fas fa-search"></i></button>
-      
-    </div>
-    <div id="menu-bar">
+
+    <form id="search" class="header-item">
+      <input type="search" name="search" id="search-input" aria-label="Search" placeholder="Pesquisar" required>
+      <button id="search-btn" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+
+    <button id="menu-bar" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#options" aria-controls="options" aria-expanded="false" aria-label="Alterna navegação">
       <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="options">
+      <ul class="navbar-nav mr-auto d-flex justify-content-center">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Minha Conta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Meus Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carrinho</a>
+        </li>
+      </ul>
     </div>
-    <div id="options" class="header-item">
-      <a href="#">Minha Conta</a>
-      <a href="#">Meus Pedidos</a>
-      <a href="#">Carrinho</a>
-    </div>
-  </header>
+    
+  </nav>
 
   <div class="main-container">
     <a class="contact" href="../email_form.html">Contato</a>
@@ -44,7 +62,7 @@
           <button class="btn">Calcular</button>
         </div>
         <div class="product-actions">
-          <button class="btn">Adicionar ao Carrinho</button>
+          <button class="btn">Ad. ao Carrinho</button>
           <button class="btn">Comprar</button>
         </div>
       </div>
